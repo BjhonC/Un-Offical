@@ -3,41 +3,41 @@ import java.util.ArrayList;
 
 public class AI_PLAYER extends Player
 {
-  private ArrayList<Card> AI_HAND;
-
-  private int postion;
-
-  public AI_PLAYER(int pos)
-  {
-    AI_HAND = new ArrayList<>();
-    this.position = pos;
-  }
-
-public ArrayList<Card> getHand()
-{
-  return this.AI_HAND;
-}
-  
-public Card AI_playerturn(Card topdeck_card) //checks to see if it's a playable turn
-{
-	for(Card card : AI_HAND)
+	private ArrayList<Card> AI_HAND;
+	
+	private int postion;
+	
+	public AI_PLAYER(int pos)
 	{
-		if(card.getColor() == topdeck_card.getColor() || card.getValue() == topdeck_card.getValue())
-		{
-			AI_HAND.remove(card);
-			return card;
-		}
+		AI_HAND = new ArrayList<>();
+		this.position = pos;
 	}
-  	// no card draw from deck
-  	Card newcard = drawfromdeck(); //we should create a method for this
- 	AI_HAND.add(newcard);
-	return null;
-}	
-
-private drawfromdeck()
-{
-  //code to replinish deck
-  return card;
-}
+	
+	public ArrayList<Card> getHand()
+	{
+		return this.AI_HAND;
+	}
+	  
+	public Card AI_playerturn(Card topdeck_card) //checks to see if it's a playable turn
+	{
+		for(Card card : AI_HAND)
+		{
+			if(card.getColor() == topdeck_card.getColor() || card.getValue() == topdeck_card.getValue())
+			{
+				AI_HAND.remove(card);
+				return card;
+			}
+		}
+	  	// no card draw from deck
+	  	Card newcard = drawfromdeck(); //we should create a method for this
+	 	AI_HAND.add(newcard);
+		return null;
+	}	
+	
+	private drawfromdeck()
+	{
+	  //code to replinish deck
+	  return card;
+	}
 }
 
