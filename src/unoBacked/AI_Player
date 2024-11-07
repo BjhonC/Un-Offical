@@ -2,7 +2,11 @@ package unoBacked;
 
 public class AI_PLAYER extend Player
 {
-  
+  Card card = new Card(cardColor, cardValue);
+
+
+
 
 
 }
+
