@@ -9,5 +9,5 @@ package unoBacked;
  * @author bjhon
  */
 public enum Value {
-    NINE, EIGHT, SEVEN, SIX, FIVE, FOUR,THREE, TWO, ONE, ZERO, PLUS2, SWITCHAROO,SKIP,WILD, PLUS4;
+    NINE, EIGHT, SEVEN, SIX, FIVE, FOUR,THREE, TWO, ONE, ZERO, PlusTwo, SWITCH,SKIP,WILD, PlusFour;
 }

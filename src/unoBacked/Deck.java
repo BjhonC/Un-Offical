@@ -49,7 +49,7 @@ public class Deck {
     private void addBlack(){
         Value[] num= Value.values();
         for (int i = 0; i < 4; i++) {
-            for (int j = 14; j < 16; j++) {
+            for (int j = 14; j < 15; j++) {
             
         deck.add(new Card(Color.WILD, num[j]));
         

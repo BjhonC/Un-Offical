@@ -13,12 +13,15 @@ import java.util.ArrayList;
 public class Player {
         private ArrayList<Card> playerHand;
         private int position;
-        
-     public Player(int pos){
+        private String name;
+     public Player(int pos, String name){
          playerHand= new ArrayList<>();
          this.position=pos;
+         this.name= name;
      }
-     
+     public String getName(){
+         return this.name;
+     }
      public void setPosition(int pos){
          this.position=pos;
      }

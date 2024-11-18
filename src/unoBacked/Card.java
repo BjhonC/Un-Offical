@@ -25,6 +25,9 @@ public class Card {
    public Value getValue(){
        return this.cardValue;
    }
+   public String getImagePath(){
+       return "/pics/Uno_Card/"+this.getColor()+"_"+this.getValue()+".png";
+   }
    @Override
     public String toString() {
         
