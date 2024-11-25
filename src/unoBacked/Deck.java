@@ -12,7 +12,7 @@ import java.util.Random;
  * @author bjhon
  */
 public class Deck {
-    private ArrayList<Card> deck;
+    private final ArrayList<Card> deck;
     
     
     
@@ -51,7 +51,7 @@ public class Deck {
         for (int i = 0; i < 4; i++) {
             for (int j = 14; j < 15; j++) {
             
-        deck.add(new Card(Color.WILD, num[j]));
+        deck.add(new Card(Color.BLACK, num[j]));
         
             }     
         }
@@ -59,17 +59,18 @@ public class Deck {
     }
     private void replenishDeck(){
         this.addNumbered();
-        this.addSpeacial();
-        this.addBlack();
+    //  this.addSpeacial();
+      //this.addBlack();
         
     }
     
     public Card getCard(){
-         Random random = new Random();
-         int num=random.nextInt(deck.size());
         if(this.deck.isEmpty()){
             this.replenishDeck();
         }
+         Random random = new Random();
+         int num=random.nextInt(deck.size());
+        
         Card placeHolder= deck.get(num);
         deck.remove(num);
         return placeHolder;

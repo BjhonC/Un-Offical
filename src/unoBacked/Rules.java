@@ -12,7 +12,13 @@ public class Rules {
     
     
     public  boolean canPlay(Card handCard, Card pileCard){
-        return handCard.getColor().equals(pileCard.getColor())|| handCard.getValue().equals(pileCard.getValue());   
+        if(handCard.getColor()==Color.BLACK){
+            return true;
+        }
+        if(handCard.getColor()==pileCard.getColor()|| handCard.getValue()==pileCard.getValue()){
+            return  true;
+        }
+        return false;   
     }
     
 }

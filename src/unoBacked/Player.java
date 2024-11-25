@@ -32,10 +32,22 @@ public class Player {
      public ArrayList<Card> getHand(){
          return this.playerHand;
      }
+     
+     public ArrayList<String> getListString(){
+         ArrayList<String> cards= new ArrayList<>();
+         for(Card cardName:this.playerHand){
+             cards.add(cardName.toString());
+         }
+         return cards;
+     }
      public Card giveCard(int num){
-         Card placeHolder= playerHand.get(num);
+       if (num >= 0 && num < playerHand.size()) {
+        Card placeHolder = playerHand.get(num);
         playerHand.remove(num);
         return placeHolder;
+    } else {
+        throw new IndexOutOfBoundsException("Card index out of bounds");
+    }
      }
      public void setCard(Card card){
          this.playerHand.add(card);

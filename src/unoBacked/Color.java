@@ -9,5 +9,5 @@ package unoBacked;
  * @author bjhon
  */
 public enum Color {
-   RED,BLUE, YELLOW, GREEN,WILD;
+   RED,BLUE, YELLOW, GREEN,BLACK;
 }
